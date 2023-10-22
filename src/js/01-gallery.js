@@ -1,9 +1,9 @@
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
-import { galleryItems } from "./gallery-items.js";
+import { galleryItems } from './gallery-items.js';
 
-const gallery = document.querySelector(".gallery");
+const gallery = document.querySelector('.gallery');
 
 const galleryMarkup = galleryItems
   .map(
@@ -19,18 +19,18 @@ const galleryMarkup = galleryItems
         </a>
       </li>`
   )
-  .join("");
+  .join('');
 
 gallery.innerHTML = galleryMarkup;
 
-const lightbox = new SimpleLightbox(".gallery a", {
-  captionsData: "alt",
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
   captionDelay: 250,
 });
 
-gallery.addEventListener("click", (event) => {
+gallery.addEventListener('click', event => {
   event.preventDefault();
-  if (event.target.classList.contains("gallery__image")) {
+  if (event.target.classList.contains('gallery__image')) {
     lightbox.open();
   }
 });
