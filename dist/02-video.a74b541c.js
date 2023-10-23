@@ -5134,8 +5134,8 @@ var encode = function encode(str, defaultEncoder, charset, kind, format) {
          || c >= 0x30 && c <= 0x39 // 0-9
          || c >= 0x41 && c <= 0x5A // a-z
          || c >= 0x61 && c <= 0x7A // A-Z
-         || format === formats.RFC1738 && (c === 0x28 || c === 0x29 // ( )
-        )) {
+         || format === formats.RFC1738 && (c === 0x28 || c === 0x29) // ( )
+        ) {
             out += string.charAt(i);
             continue;
         }
@@ -5487,9 +5487,9 @@ http.METHODS = [
 ];
 
 },{"./lib/request":"csW06","./lib/response":"47huq","xtend":"93zjj","builtin-status-codes":"iqSVp","url":"7qjc7"}],"csW06":[function(require,module,exports) {
+var global = arguments[3];
 var process = require("process");
 var Buffer = require("buffer").Buffer;
-var global = arguments[3];
 var capability = require("./capability");
 var inherits = require("inherits");
 var response = require("./response");
@@ -5978,9 +5978,9 @@ module.exports = function inherits(ctor, superCtor) {
 };
 
 },{}],"47huq":[function(require,module,exports) {
-var process = require("process");
-var Buffer = require("buffer").Buffer;
 var global = arguments[3];
+var Buffer = require("buffer").Buffer;
+var process = require("process");
 var capability = require("./capability");
 var inherits = require("inherits");
 var stream = require("readable-stream");
@@ -6185,8 +6185,8 @@ exports.pipeline = require("./lib/internal/streams/pipeline.js");
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 "use strict";
-var process = require("process");
 var global = arguments[3];
+var process = require("process");
 module.exports = Readable;
 /*<replacement>*/ var Duplex;
 /*</replacement>*/ Readable.ReadableState = ReadableState;
@@ -8020,8 +8020,8 @@ Object.defineProperty(Duplex.prototype, "destroyed", {
 // Implement an async ._write(chunk, encoding, cb), and it'll handle all
 // the drain event emission and buffering.
 "use strict";
-var process = require("process");
 var global = arguments[3];
+var process = require("process");
 module.exports = Writable;
 /* <replacement> */ function WriteReq(chunk, encoding, cb) {
     this.chunk = chunk;
