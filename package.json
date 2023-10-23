@@ -5,7 +5,7 @@
   "homepage": "https://barin2010.github.io/goit-js-hw-08",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-08/"
+    "build": "parcel build src/*.https://barin2010.github.io/goit-js-hw-08/"
   },
   "repository": {
     "type": "git",
@@ -38,5 +38,5 @@
     "url": "^0.11.3"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
-  "main": "index.html"
+  "main": "index.js"
 }
